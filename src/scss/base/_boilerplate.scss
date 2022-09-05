@@ -1,0 +1,55 @@
+@use "../abstracts/" as a;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  min-block-size: 100vh;
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion) {
+    scroll-behavior: auto;
+  }
+
+  @include a.breakpoint(medium) {
+    font-size: 81.25%;
+  }
+  @include a.breakpoint(large) {
+    font-size: 100%;
+  }
+  @include a.breakpoint(xlarge) {
+    font-size: 118.75%;
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --base-font-size: 1rem;
+  --base-padding: 0.5em;
+  --base-margin: 0.5em;
+  --base-border-radius: 20px;
+  --base-gap: 0.5rem;
+  --base-line-height: 1.5;
+
+  --font-stack-nunito: "Nunito", serif;
+  --font-wt-regular: 400;
+  --font-wt-medium: calc(var(--font-wt-regular) + 100);
+  --font-wt-semi: calc(var(--font-wt-medium) + 100);
+  --font-wt-black: calc(var(--font-wt-semi) + 300);
+
+  @media (prefers-color-scheme: dark) {
+  }
+}
+
+body {
+  min-block-size: inherit;
+  box-sizing: inherit;
+  font: var(--font-wt-regular, 400) var(--base-font-size, 1rem) /
+    var(--base-line-height, 1.5) var(--font-stack-nunito, "Nunito", serif);
+}

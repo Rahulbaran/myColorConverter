@@ -1,0 +1,13 @@
+@mixin fontFace($src, $weight) {
+  @font-face {
+    font-family: "Nunito";
+    src: url($src);
+    font-style: normal;
+    font-weight: $weight;
+  }
+}
+
+@include fontFace("../assets/fonts/Nunito-Regular.ttf", 400);
+@include fontFace("../assets/fonts/Nunito-Medim.ttf", 500);
+@include fontFace("../assets/fonts/Nunito-SemiBold.ttf", 600);
+@include fontFace("../assets/fonts/Nunito-Black.ttf", 900);
