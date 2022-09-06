@@ -1,0 +1,22 @@
+.header {
+  align-self: flex-start;
+  background-color: var(--header-bg-color);
+  clip-path: polygon(8% 0, 100% 0, 100% 70%, 92% 100%, 0 100%, 0 30%);
+}
+
+.logo {
+  font-size: calc(var(--base-font-size, 1rem) * 1.8);
+  font-weight: var(--font-wt-black, 900);
+  line-height: 1;
+  font-style: italic;
+  background-image: linear-gradient(
+    to right,
+    var(--logo-bg-1) 30%,
+    var(--logo-bg-2) 60%,
+    var(--logo-bg-3)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: calc(var(--base-padding, 0.5em) * 0.75) var(--base-padding, 0.5em);
+}

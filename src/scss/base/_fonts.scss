@@ -8,6 +8,7 @@
 }
 
 @include fontFace("../assets/fonts/Nunito-Regular.ttf", 400);
-@include fontFace("../assets/fonts/Nunito-Medim.ttf", 500);
+@include fontFace("../assets/fonts/Nunito-Medium.ttf", 500);
 @include fontFace("../assets/fonts/Nunito-SemiBold.ttf", 600);
+@include fontFace("../assets/fonts/Nunito-Bold.ttf", 700);
 @include fontFace("../assets/fonts/Nunito-Black.ttf", 900);

@@ -1,0 +1,38 @@
+.cards__wrapper {
+  .card:last-of-type .card__color--window {
+    background-color: hsl(300deg, 100%, 50%);
+  }
+
+  .rgbtohex__card {
+    display: none;
+  }
+}
+
+.btns__wrapper {
+  margin-block-end: var(--base-margin);
+
+  button {
+    color: var(--btn-text-color);
+    font-weight: var(--font-wt-bold, 700);
+    font-size: calc(var(--base-font-size) * 1.15);
+    padding: var(--base-padding, 0.5em) calc(var(--base-padding, 0.5em) * 2.25);
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+    border-bottom: 0.25rem solid transparent;
+    border-radius: calc(var(--base-border-radius) * 0.15);
+    transition: border-bottom 150ms, background-color 200ms;
+
+    &.btn__active {
+      background-color: var(--btn-bg-color);
+      border-bottom-color: var(--btn-border-color);
+    }
+
+    &:hover:not(.btn__active),
+    &:focus-visible {
+      outline: none;
+      cursor: pointer;
+      background-color: var(--btn-bg-color);
+      border-bottom-color: var(--btn-border-color);
+    }
+  }
+}

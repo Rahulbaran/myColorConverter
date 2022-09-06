@@ -1,0 +1,18 @@
+.footer {
+  align-self: flex-end;
+
+  i {
+    padding: calc(var(--base-padding, 0.5em) * 3.5)
+      calc(var(--base-padding, 0.5em) * 0.5)
+      calc(var(--base-padding, 0.5em) * 0.5)
+      calc(var(--base-padding, 0.5em) * 3.5);
+    background-color: var(--footer-bg-color);
+    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+    color: var(--logo-color);
+    text-shadow: 0 2px 1px hsl(0 0% 0%/0.3);
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 @use "../abstracts/" as a;
 
 html {
-  font-size: 62.5%;
+  font-size: 75%;
   box-sizing: border-box;
   min-block-size: 100vh;
   scroll-behavior: smooth;
@@ -11,13 +11,13 @@ html {
   }
 
   @include a.breakpoint(medium) {
-    font-size: 81.25%;
+    font-size: 87.5%;
   }
   @include a.breakpoint(large) {
     font-size: 100%;
   }
   @include a.breakpoint(xlarge) {
-    font-size: 118.75%;
+    font-size: 112.5%;
   }
 }
 
@@ -39,11 +39,48 @@ html {
 
   --font-stack-nunito: "Nunito", serif;
   --font-wt-regular: 400;
-  --font-wt-medium: calc(var(--font-wt-regular) + 100);
-  --font-wt-semi: calc(var(--font-wt-medium) + 100);
-  --font-wt-black: calc(var(--font-wt-semi) + 300);
+  --font-wt-medium: calc(var(--font-wt-regular, 400) + 100);
+  --font-wt-semi: calc(var(--font-wt-medium, 500) + 100);
+  --font-wt-bold: calc(var(--font-wt-semi, 600) + 100);
+  --font-wt-black: calc(var(--font-wt-bold, 700) + 200);
+
+  // Light Mode Colors
+  --cosmic-latte-color: 42, 100%, 95%;
+  --orange-yellow-color: 41, 95%, 82%;
+  --indian-red-color: 1, 69%, 60%;
+  --vivid-burgundy-color: 343, 84%, 33%;
+  --rusty-red-color: 352, 68%, 50%;
+
+  // Dark Mode Colors
+  --mindaro-color: 76, 100%, 73%;
+  --violet-color: 292, 25%, 23%;
+  --yellow-green-color: 82, 59%, 56%;
+  --dark-purple-color: 293, 25%, 20%;
+  --cream-color: 76, 100%, 89%;
+  --white-color: hsl(0 0% 100%);
+
+  --body-bg-color: hsl(var(--cream-color));
+  --header-bg-color: hsl(var(--orange-yellow-color));
+  --footer-bg-color: var(--header-bg-color);
+  --card-bg-color: var(--white-color);
+  --logo-bg-1: hsl(var(--vivid-burgundy-color));
+  --logo-bg-2: hsl(var(--rusty-red-color));
+  --logo-bg-3: hsl(var(--indian-red-color));
+  --heading-color: hsl(var(--indian-red-color));
+  --btn-border-color: hsl(var(--rusty-red-color));
+  --btn-bg-color: hsl(var(--orange-yellow-color));
+  --btn-text-color: var(--heading-color);
+  --logo-color: hsl(263deg, 45%, 30%);
 
   @media (prefers-color-scheme: dark) {
+    --header-bg-color: hsl(var(--dark-purple-color));
+    --body-bg-color: hsl(var(--violet-color));
+    --logo-bg-1: hsl(var(--yellow-green-color));
+    --logo-bg-2: hsl(var(--mindaro-color));
+    --logo-bg-3: hsl(var(--cream-color));
+    --btn-bg-color: hsl(var(--dark-purple-color));
+    --btn-text-color: hsl(var(--mindaro-color));
+    --logo-color: hsl(264deg, 50%, 85%);
   }
 }
 
@@ -52,4 +89,5 @@ body {
   box-sizing: inherit;
   font: var(--font-wt-regular, 400) var(--base-font-size, 1rem) /
     var(--base-line-height, 1.5) var(--font-stack-nunito, "Nunito", serif);
+  background-color: var(--body-bg-color);
 }

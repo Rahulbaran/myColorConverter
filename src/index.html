@@ -19,8 +19,125 @@
     <meta name="color-scheme" content="dark light" />
 
     <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <!---------- boxicons ------------>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <h1>Hello WOrld</h1>
+  <body class="flex flex-column justify-space-between align-center">
+    <header class="header">
+      <a href="#" class="logo" title="myColorConverter logo"
+        >myColorConverter</a
+      >
+    </header>
+
+    <main class="main">
+      <div class="btns__wrapper flex justify-center align-flex-start gap-1">
+        <button class="btn btn__active hextorgb__btn">Hex to Rgb</button>
+        <button class="btn rgbtohex__btn">Rgb to Hex</button>
+      </div>
+
+      <div class="cards__wrapper">
+        <div class="card hextorgb__card flex flex-column gap-4">
+          <div class="card__color--data flex flex-column gap-4">
+            <div class="color__field--wrapper flex flex-column">
+              <label for="hex">Hex color code</label>
+              <input
+                type="text"
+                name="hex"
+                class="hex__input--ield"
+                id="hex"
+                autocomplete="off"
+                placeholder="#ffff00"
+              />
+            </div>
+
+            <div
+              class="color__value--box flex gap-2 align-center justify-space-between"
+            >
+              <h3>rgb</h3>
+              <h4
+                class="color__value rgb__value flex justify-space-between align-center"
+              >
+                <span>rgb(255, 255, 0)</span>
+                <button class="btn" title="copy color value">
+                  <i class="bx bxs-copy"></i>
+                </button>
+              </h4>
+            </div>
+            <div
+              class="color__value--box flex gap-2 align-center justify-space-between"
+            >
+              <h3>hsl</h3>
+              <h4
+                class="color__value hsl__value flex justify-space-between align-center"
+              >
+                <span>hsl(60, 100%, 50%)</span>
+                <button class="btn" title="copy color value">
+                  <i class="bx bxs-copy"></i>
+                </button>
+              </h4>
+            </div>
+          </div>
+          <div class="card__color--window"></div>
+        </div>
+
+        <div class="card rgbtohex__card flex flex-column gap-4">
+          <div class="card__color--data flex flex-column gap-4">
+            <div class="color__field--wrapper flex flex-column">
+              <label for="rgb"> RGB color code</label>
+              <input
+                type="text"
+                name="rgb"
+                class="rgb__input--ield"
+                id="rgb"
+                autocomplete="off"
+                placeholder="rgb(255, 0, 255)"
+              />
+            </div>
+
+            <div
+              class="color__value--box flex gap-2 align-center justify-space-between"
+            >
+              <h3>hex</h3>
+              <h4
+                class="color__value hex__value flex justify-space-between align-center"
+              >
+                <span>#ff00ff</span>
+                <button class="btn" title="copy color value">
+                  <i class="bx bxs-copy"></i>
+                </button>
+              </h4>
+            </div>
+            <div
+              class="color__value--box flex gap-2 align-center justify-space-between"
+            >
+              <h3>hsl</h3>
+              <h4
+                class="color__value hsl__value flex justify-space-between align-center"
+              >
+                <span>hsl(300, 100%, 50%)</span>
+                <button class="btn" title="copy color value">
+                  <i class="bx bxs-copy"></i>
+                </button>
+              </h4>
+            </div>
+          </div>
+          <div class="card__color--window"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <a
+        href="https://github.com/rahulbaran/myColorConverter"
+        title="check app codebase"
+        target="_blank"
+      >
+        <i class="bx bxl-github bx-md"></i>
+      </a>
+    </footer>
   </body>
 </html>

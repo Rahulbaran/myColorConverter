@@ -1,0 +1,13 @@
+:is(h1, h2, h3, h4, h5, h6) {
+  font-weight: var(--font-wt-black, 900);
+
+  &:not(h5, h6) {
+    line-height: calc(var(--base-line-height, 1.5) / 1.5);
+  }
+}
+
+a,
+a:link {
+  text-decoration: none;
+  display: inline-block;
+}
