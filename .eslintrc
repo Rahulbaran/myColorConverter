@@ -14,6 +14,7 @@
     "prefer-arrow-callback": "off",
     "callback-return": "off",
     "no-useless-escape": "off",
-    "prefer-spread": "off"
+    "prefer-spread": "off",
+    "no-console": "error"
   }
 }

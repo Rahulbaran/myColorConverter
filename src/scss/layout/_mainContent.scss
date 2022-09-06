@@ -3,8 +3,12 @@
     background-color: hsl(300deg, 100%, 50%);
   }
 
-  .rgbtohex__card {
+  .card {
     display: none;
+
+    &.card-visible {
+      display: flex;
+    }
   }
 }
 

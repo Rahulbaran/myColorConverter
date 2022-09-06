@@ -5,6 +5,18 @@
   padding: calc(var(--base-padding, 0.5em) * 3);
   box-shadow: 0 5px 20px -8px hsl(0deg, 0%, 0%, 0.4);
   border-radius: calc(var(--base-border-radius, 20px) * 0.15);
+  animation: 2000ms animate-card ease-out 100ms;
+
+  @keyframes animate-card {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
   &__color--window {
     --color-window-width: 250px;
@@ -23,6 +35,14 @@
       --color-window-ht: 250px;
     }
   }
+  @media (orientation: landscape) and (max-width: 48em) {
+    & {
+      flex-direction: row !important;
+    }
+    &__color--window {
+      --color-window-ht: 200px;
+    }
+  }
 }
 .color__field--wrapper {
   label {
@@ -33,8 +53,8 @@
   }
 
   [type="text"] {
-    background-color: hsl(0deg, 0%, 92%);
-    padding: calc(var(--base-padding) * 0.6) calc(var(--base-padding) * 0.8);
+    background-color: hsl(0deg, 0%, 90%);
+    padding: calc(var(--base-padding) * 0.7) calc(var(--base-padding) * 0.8);
     font-size: calc(var(--base-font-size, 1rem) * 1.05);
     font-family: inherit;
     color: hsl(220deg, 10%, 35%);
