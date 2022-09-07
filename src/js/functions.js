@@ -1,4 +1,10 @@
-// Function for converting hex into rgb
+/**
+ * Convert HEX color value to RGB
+ * returns an array of Red, Green & Blue
+ *
+ * @param  String  Hex value
+ * @return Array  The r,g,b values
+ */
 export const hexToRgb = hex => {
   if (hex.length === 4) {
     return hex
@@ -13,7 +19,13 @@ export const hexToRgb = hex => {
   }
 };
 
-// Function for converting rgb into hex
+/**
+ * Convert RGB color value to Hex
+ * returns a string of hex color value
+ *
+ * @param  Array   [r,g,b]  red, green & blue values
+ * @return String  Hex Value
+ */
 export const rgbToHex = rgb => {
   const rgbValues = rgb
     .slice(4)
@@ -34,7 +46,44 @@ export const rgbToHex = rgb => {
     : null;
 };
 
-// Function for converting rgb into hsl
-export const rgbToHsl = rgbArr => {
-  console.log(rgbArr);
+/**
+ * Converts RGB color value into HSL.
+ * returns an array containing h,s & l
+ *
+ * @param  Array   [r,g,b]  red, green & blue values
+ * @return Array   The hue, stauration & lightness values
+ *
+ */
+export const rgbToHsl = (...rgbArr) => {
+  let h, s, l;
+
+  // Calculate fraction of r,g,b
+  const rgb = rgbArr.map(val => val / 255);
+  const [r, g, b] = rgb;
+
+  // Calculate lightness
+  const [min, max] = [Math.min(...rgb), Math.max(...rgb)];
+  l = (min + max) / 2;
+
+  // Calculate hue & saturation
+  const delta = max - min;
+  if (delta === 0) h = s = 0;
+  else {
+    s = l > 0.5 ? delta / (2 - l * 2) : delta / (l * 2);
+
+    switch (max) {
+      case r:
+        h = (g - b) / delta + (g < b ? 6 : 0);
+        break;
+      case g:
+        h = (b - r) / delta + 2;
+        break;
+      case b:
+        h = (r - g) / delta + 4;
+        break;
+    }
+    h = Math.round(h * 60);
+  }
+
+  return [h, +(s * 100).toFixed(0), +(l * 100).toFixed(0)];
 };
