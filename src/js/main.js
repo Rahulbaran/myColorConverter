@@ -4,7 +4,7 @@ import { rgbToHex, hexToRgb, rgbToHsl } from "./functions";
 
 const [hexRegex, rgbRegex] = [
   /^#([\da-f]{3}|[\da-f]{6})$/i,
-  /^(rgb)\((\d{1,3}\s{0,},\s{0,}){2}\d{1,3}\s{0,}\)$/i
+  /^(rgb)\(\s{0,}(\d{1,3}\s{0,},\s{0,}){2}\d{1,3}\s{0,}\)$/i
 ];
 
 /*----------- Event handler for card switch buttons -----------*/
@@ -47,12 +47,13 @@ try {
 sel.$hexInputField?.addEventListener("input", function () {
   if (hexRegex.test(this.value.trim())) {
     // Calculate rgb & hsl values
-    const rgbData = hexToRgb(this.value.trim());
-    const hslData = rgbToHsl(rgbData);
+    const [r, g, b] = hexToRgb(this.value.trim());
+    const [h, s, l] = rgbToHsl(r, g, b);
 
     // Display rgb & hex values in UI
-    const rgbColorValue = `rgb(${rgbData[0]}, ${rgbData[1]}, ${rgbData[2]})`;
+    const rgbColorValue = `rgb(${r}, ${g}, ${b})`;
     sel.$rgbColorLabel.textContent = rgbColorValue;
+    sel.$firstHslColorLabel.textContent = `hsl(${h}, ${s}%, ${l}%)`;
 
     // Display calculated color in color window
     sel.$firstColorWindow.style.backgroundColor = rgbColorValue;
@@ -65,10 +66,11 @@ sel.$rgbInputField?.addEventListener("input", function () {
     // Calculate hex & hsl values
     const hexColor = rgbToHex(this.value.trim());
     if (hexColor) {
-      const hslData = rgbToHsl(hexToRgb(hexColor));
+      const [h, s, l] = rgbToHsl(...hexToRgb(hexColor));
 
       // Display hex & hsl values in UI
       sel.$hexColorLabel.textContent = hexColor;
+      sel.$lastHslColorLabel.textContent = `hsl(${h}, ${s}%, ${l}%)`;
 
       // Display calcualted color value in color window
       sel.$lastColorWindow.style.backgroundColor = hexColor;
