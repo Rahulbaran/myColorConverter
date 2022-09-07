@@ -5,7 +5,7 @@
   padding: calc(var(--base-padding, 0.5em) * 3);
   box-shadow: 0 5px 20px -8px hsl(0deg, 0%, 0%, 0.4);
   border-radius: calc(var(--base-border-radius, 20px) * 0.15);
-  animation: 2000ms animate-card ease-out 100ms;
+  animation: 2000ms animate-card ease-out;
 
   @keyframes animate-card {
     0% {

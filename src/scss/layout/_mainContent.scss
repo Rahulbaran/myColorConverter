@@ -13,7 +13,7 @@
 }
 
 .btns__wrapper {
-  margin-block-end: var(--base-margin);
+  margin-block-end: calc(var(--base-margin) * 2);
 
   button {
     color: var(--btn-text-color);
