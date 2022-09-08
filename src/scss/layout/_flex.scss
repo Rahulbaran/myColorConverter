@@ -24,7 +24,7 @@ $alignments: "flex-start", "flex-end", "center", "stretch";
   }
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 6 {
   .gap-#{$i} {
     gap: calc(var(--base-gap) * #{$i});
   }
