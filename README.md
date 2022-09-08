@@ -8,5 +8,4 @@
 - It will also give the corresponding **hsl** color value.
 - There is also a **window** to check the color.
 
-> **Note**
 > Checkout the [app](https://mycolorconverter.netlify.app/).
