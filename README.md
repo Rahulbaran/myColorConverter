@@ -1,4 +1,4 @@
-# [myColorConverter]()
+# myColorConverter
 
 - It is a Javascript based web application.
 
@@ -8,4 +8,5 @@
 - It will also give the corresponding **hsl** color value.
 - There is also a **window** to check the color.
 
-> Checkout the [app]().
+> **Note**
+> Checkout the [app](https://mycolorconverter.netlify.app/).
