@@ -12,6 +12,8 @@
 
 ### Screenshot
 
-<img src="./src/assets/images/darkmode.png" alt="darkmode screenshot" width="800" height="600">
+##### Dark Mode
+
+<img src="./src/assets/images/desktop-dm.png" alt="desktop darkmode screenshot" width="800" height="450">
 
 > Checkout the [app](https://mycolorconverter.netlify.app/).
