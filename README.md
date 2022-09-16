@@ -10,6 +10,6 @@
 - App can be viewed both on dark mode as well as Light Mode.
 
  ### Screenshot
-<img src="images/gt.png" alt="screenshot" width="500" height="600">
+<img src="images/gt.png" alt="screenshot" width="800" height="600">
 
 > Checkout the [app](https://mycolorconverter.netlify.app/).
