@@ -23,7 +23,7 @@
     --color-window-ht: 100px;
     width: var(--color-window-width, 250px);
     height: var(--color-window-ht, 100px);
-    border: 1px solid hsl(0deg, 0%, 85%);
+    border: 1px solid hsl(0deg, 0%, 90%);
     background-color: hsl(60deg, 100%, 50%);
   }
 
@@ -78,7 +78,7 @@
     color: hsl(0deg, 0%, 55%);
     font-weight: var(--font-wt-semi, 600);
     width: var(--h4-inline-size, 200px);
-    background-color: hsl(0 0% 94%);
+    background-color: hsl(0deg 0% 94%);
     padding: calc(var(--base-padding, 0.5em) * 0.5);
 
     @include a.breakpoint(large) {
