@@ -1,7 +1,6 @@
 # myColorConverter
 
-- A small web application build on javacript to convert **hex** color
-- code to **rgb** && vice-versa.
+- A small web application built on javacript to convert color code in **rgb**, **hex** & **hsl** form.
 
 ### Features
 
@@ -12,7 +11,7 @@
 
 ### Screenshot
 
-##### Dark Mode
+#### Dark Mode
 
 <img src="./src/assets/images/desktop-dm.png" alt="desktop darkmode screenshot" width="800" height="450">
 
