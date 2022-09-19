@@ -1,0 +1,27 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "rules": {
+    "arrow-parens": 0,
+    "func-names": 0,
+    "prefer-arrow-callback": 0,
+    "callback-return": 0,
+    "no-useless-escape": 0,
+    "no-console": 2,
+    "no-var": 2,
+    "prefer-const": 2,
+    "prefer-spread": 2,
+    "arrow-spacing": 2,
+    "spaced-comment": 2,
+    "semi": 2,
+    "require-await": 2
+  },
+  "ignorePatterns": ["*.config.js", "dist/js"]
+}
