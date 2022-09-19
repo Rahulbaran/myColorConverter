@@ -1,5 +1,10 @@
-> .25%
-not IE < 11
+[production]
+> 0.25%
+not dead
+not IE 11
+not op_mini all
 
-last 2 versions
-
+[development]
+last 2 chrome version
+last 2 firefox version
+last 2 safari version

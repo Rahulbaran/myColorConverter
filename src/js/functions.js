@@ -52,10 +52,9 @@ export const rgbToHex = rgb => {
  *
  * @param  Array   [r,g,b]  red, green & blue values
  * @return Array   The hue, stauration & lightness values
- *
  */
 export const rgbToHsl = (...rgbArr) => {
-  let h, s, l;
+  let h, s;
 
   // Calculate fraction of r,g,b
   const rgb = rgbArr.map(val => val / 255);
@@ -63,7 +62,7 @@ export const rgbToHsl = (...rgbArr) => {
 
   // Calculate lightness
   const [min, max] = [Math.min(...rgb), Math.max(...rgb)];
-  l = (min + max) / 2;
+  const l = (min + max) / 2;
 
   // Calculate hue & saturation
   const delta = max - min;
