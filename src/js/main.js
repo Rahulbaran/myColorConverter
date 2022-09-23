@@ -7,7 +7,7 @@ const [hexRegex, rgbRegex] = [
   /^(rgb)\(\s{0,}(\d{1,3}\s{0,},\s{0,}){2}\d{1,3}\s{0,}\)$/i
 ];
 
-/*----------- Event handler for card switch buttons -----------*/
+/* ----------- Event handler for card switch buttons -----------*/
 sel.$hexToRgbBtn.addEventListener("click", function () {
   // Toggle class in buttons
   if (!this.classList.contains("btn__active"))
@@ -30,7 +30,7 @@ sel.$rgbToHexBtn.addEventListener("click", function () {
   sel.$hexToRgbCard.classList.remove("card-visible");
 });
 
-/*--------------- Event handler for copy buttons --------------*/
+/* --------------- Event handler for copy buttons --------------*/
 try {
   sel.$copyBtns.forEach(cpBtn => {
     cpBtn.addEventListener("click", function () {
@@ -43,7 +43,7 @@ try {
   sel.$copyBtns.forEach(cpBtn => (cpBtn.style.display = "none"));
 }
 
-/*-------------- Event Handler for hex input field --------------*/
+/* -------------- Event Handler for hex input field --------------*/
 sel.$hexInputField?.addEventListener("input", function () {
   if (hexRegex.test(this.value.trim())) {
     // Calculate rgb & hsl values
@@ -60,7 +60,7 @@ sel.$hexInputField?.addEventListener("input", function () {
   }
 });
 
-/*--------------- Event Handler for rgb input field ---------------*/
+/* --------------- Event Handler for rgb input field ---------------*/
 sel.$rgbInputField?.addEventListener("input", function () {
   if (rgbRegex.test(this.value.trim())) {
     // Calculate hex & hsl values

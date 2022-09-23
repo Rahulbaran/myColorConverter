@@ -21,7 +21,10 @@
     "arrow-spacing": 2,
     "spaced-comment": 2,
     "semi": 2,
-    "require-await": 2
+    "require-await": 2,
+    "prefer-template": 2,
+    "object-shorthand": 2,
+    "comma-dangle": 2
   },
-  "ignorePatterns": ["*.config.js", "dist/js"]
+  "ignorePatterns": ["*.config.js", "dist", "node_modules"]
 }

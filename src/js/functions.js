@@ -1,9 +1,9 @@
 /**
- * Convert HEX color value to RGB
- * returns an array of Red, Green & Blue
+ * Converts HEX color value to RGB
+ * returns an array of red, green & blue
  *
- * @param  String  Hex value
- * @return Array  The r,g,b values
+ * @param  {string} hex - Hex color value
+ * @return {Array}      - red,green & blue values
  */
 export const hexToRgb = hex => {
   if (hex.length === 4) {
@@ -20,11 +20,11 @@ export const hexToRgb = hex => {
 };
 
 /**
- * Convert RGB color value to Hex
+ * Convert RGB color value to HEX
  * returns a string of hex color value
  *
- * @param  Array   [r,g,b]  red, green & blue values
- * @return String  Hex Value
+ * @param  {Array} [r,g,b] - red, green & blue values
+ * @return {string}        - Hex color value
  */
 export const rgbToHex = rgb => {
   const rgbValues = rgb
@@ -35,23 +35,22 @@ export const rgbToHex = rgb => {
     .filter(e => e <= 255);
 
   return rgbValues.length === 3
-    ? "#" +
-        rgbValues
-          .map(e =>
-            (+e).toString(16).length < 2
-              ? "0" + (+e).toString(16)
-              : (+e).toString(16)
-          )
-          .join("")
+    ? `#${rgbValues
+        .map(e =>
+          (+e).toString(16).length < 2
+            ? `0${(+e).toString(16)}`
+            : (+e).toString(16)
+        )
+        .join("")}`
     : null;
 };
 
 /**
  * Converts RGB color value into HSL.
- * returns an array containing h,s & l
+ * returns an array containing hue,saturation & lightness
  *
- * @param  Array   [r,g,b]  red, green & blue values
- * @return Array   The hue, stauration & lightness values
+ * @param  {Array} [r,g,b] - red, green & blue values
+ * @return {Array}         - hue, stauration & lightness values
  */
 export const rgbToHsl = (...rgbArr) => {
   let h, s;
@@ -86,3 +85,7 @@ export const rgbToHsl = (...rgbArr) => {
 
   return [h, +(s * 100).toFixed(0), +(l * 100).toFixed(0)];
 };
+
+/**
+ * TODO: Function for conversion of HSL color value to RGB
+ */
