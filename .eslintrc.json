@@ -26,5 +26,5 @@
     "object-shorthand": 2,
     "comma-dangle": 2
   },
-  "ignorePatterns": ["/*.config.js", "/dist", "node_modules"]
+  "ignorePatterns": ["*.config.js", "dist", "node_modules"]
 }
