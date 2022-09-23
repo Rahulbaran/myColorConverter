@@ -3,3 +3,7 @@ node_modules
 
 # lock json file
 package-lock.json
+
+# cache folders
+.vscode
+.DS_Store
