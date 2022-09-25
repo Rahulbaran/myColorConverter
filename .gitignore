@@ -7,3 +7,6 @@ package-lock.json
 # cache folders
 .vscode
 .DS_Store
+
+# test coverage folder
+coverage
