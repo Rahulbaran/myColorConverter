@@ -23,7 +23,7 @@ export const hexToRgb = hex => {
  * Convert RGB color value to HEX
  * returns a string of hex color value
  *
- * @param  {Array} [r,g,b] - red, green & blue values
+ * @param  {string} rgb(R, G, B)       - RGB color value
  * @return {string}        - Hex color value
  */
 export const rgbToHex = rgb => {

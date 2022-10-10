@@ -1,5 +1,5 @@
 import { resolve } from "path";
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import legacy from "@vitejs/plugin-legacy";
 
 const root = resolve(__dirname, "src");
@@ -19,6 +19,9 @@ export default defineConfig({
       targets: ["defaults", "not IE 11"]
     })
   ],
+  test: {
+    include: ['tests/*.{spec,test}.js']
+  },
 
   server: {
     open: true
