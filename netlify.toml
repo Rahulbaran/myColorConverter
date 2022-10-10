@@ -1,0 +1,27 @@
+[build]
+    command = 'npm run build'
+    publish = 'dist'
+
+
+[[redirects]]
+    from = '/home'
+    to = '/'
+    force = true
+    
+
+
+[[redirects]]
+    from = '/index.html'
+    to = '/'
+    force = true
+
+
+[[headers]]
+    for = "/*"
+    [headers.values]
+        Access-Control-Allow-Origin = "*"
+        Access-Control-Allow-Headers = "*"
+
+[dev]
+    command = 'npm start'
+    publish = 'src'
