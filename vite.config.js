@@ -13,6 +13,8 @@ export default defineConfig({
     emptyOutDir: true,
     sourcemap: prodEnv ? true : "inline"
   },
+  publicDir: resolve(__dirname, "public"),
+
   mode: prodEnv ? "production" : "development",
   plugins: [
     legacy({
